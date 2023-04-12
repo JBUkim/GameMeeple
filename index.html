@@ -83,8 +83,8 @@
           <nav>
             <ul class="md:flex items-center justify-between text-base text-gray-700 pt-4 md:pt-0">
               <li><a class="inline-block no-underline text-black font-bold hover:underline py-2 px-4" href="/">Home</a></li>
-              <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="/about">About</a></li>
-              <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="/games">Games</a></li>
+              <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="about.html">About</a></li>
+              <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="games.html">Games</a></li>
             </ul>
           </nav>
         </div>
@@ -108,30 +108,10 @@
             Game Meeple
           </a>
         </div>
-
-        <!-- <div class="order-2 md:order-3 flex items-center" id="nav-content">
-          <a class="inline-block no-underline hover:text-black" href="#">
-            <svg class="fill-current hover:text-black" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <circle fill="none" cx="12" cy="7" r="3" />
-              <path
-                d="M12 2C9.243 2 7 4.243 7 7s2.243 5 5 5 5-2.243 5-5S14.757 2 12 2zM12 10c-1.654 0-3-1.346-3-3s1.346-3 3-3 3 1.346 3 3S13.654 10 12 10zM21 21v-1c0-3.859-3.141-7-7-7h-4c-3.86 0-7 3.141-7 7v1h2v-1c0-2.757 2.243-5 5-5h4c2.757 0 5 2.243 5 5v1H21z"
-              />
-            </svg>
-          </a>
-
-          <a class="pl-3 inline-block no-underline hover:text-black" href="#">
-            <svg class="fill-current hover:text-black" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path
-                d="M21,7H7.462L5.91,3.586C5.748,3.229,5.392,3,5,3H2v2h2.356L9.09,15.414C9.252,15.771,9.608,16,10,16h8 c0.4,0,0.762-0.238,0.919-0.606l3-7c0.133-0.309,0.101-0.663-0.084-0.944C21.649,7.169,21.336,7,21,7z M17.341,14h-6.697L8.371,9 h11.112L17.341,14z"
-              />
-              <circle cx="10.5" cy="18.5" r="1.5" />
-              <circle cx="17.5" cy="18.5" r="1.5" />
-            </svg>
-          </a>
-        </div> -->
       </div>
     </nav>
 
+    <!-- Slide section -->
     <div class="carousel relative container mx-auto" style="max-width: 1600px">
       <div class="carousel-inner relative overflow-hidden w-full">
         <!--Slide 1-->
@@ -221,45 +201,128 @@
       </div>
     </div>
 
-    <!-- Alternatively if you want to just have a single hero
+    <!-- Intro section -->
+    <section class="bg-white pt-8">
+      <div class="container py-8 px-6 mx-auto">
+        <div class="overflow-hidden sm:grid sm:grid-cols-2 sm:items-center">
+          <div class="p-8 md:p-12 lg:px-16 lg:py-24">
+            <div class="mx-auto max-w-xl text-center sm:text-left">
+              <h2 class="text-2xl font-bold text-gray-900 md:text-3xl uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 mb-8">Board Game?</h2>
 
-    <section
-      class="w-full mx-auto bg-nordic-gray-light flex pt-12 md:pt-0 md:items-center bg-cover bg-right"
-      style="
-        max-width: 1600px;
-        height: 32rem;
-        background-image: url('https://images.unsplash.com/photo-1422190441165-ec2956dc9ecc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=80');
-      "
-    >
-      <div class="container mx-auto">
-        <div class="flex flex-col w-full lg:w-1/2 justify-center items-start px-6 tracking-wide">
-          <h1 class="text-black text-2xl my-4">Stripy Zig Zag Jigsaw Pillow and Duvet Set</h1>
-          <a class="text-xl inline-block no-underline border-b border-gray-600 leading-relaxed hover:text-black hover:border-black" href="#">products</a>
+              <p class="hidden text-gray-500 md:mt-4 md:block">
+                보드 게임은 최소 두 명 이상의 사람들이 직접 대면하여 보드(board), 카드(card), 타일(tile)등 유형의 물리적인 도구를 이용하여 정해진 규칙에 따라 승패를 가리는 모든 놀이를 통칭합니다.
+              </p>
+            </div>
+          </div>
+          <div class="grid justify-items-center">
+            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+            <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_fdiz42kg.json" background="transparent" speed="1" style="width: 300px; height: 300px" loop autoplay></lottie-player>
+          </div>
         </div>
-      </div>
-    </section> -->
 
+        <section class="bg-white py-8">
+          <div class="container mx-auto flex items-center flex-wrap pt-4 pb-12">
+            <div class="w-full md:w-1/3 xl:w-1/3 p-6 flex flex-col">
+              <a href="https://www.boardgame.or.kr/association/boardgame" target="_blank" class="group relative block h-64 sm:h-80 lg:h-96">
+                <span class="absolute inset-0 border-2 border-dashed border-black"></span>
+                <div class="relative flex h-full transform items-end border-2 border-black bg-white transition-transform group-hover:-translate-x-2 group-hover:-translate-y-2">
+                  <div class="p-4 !pt-0 transition-opacity group-hover:absolute group-hover:opacity-0 sm:p-6 lg:p-8">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 sm:h-12 sm:w-12">
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                      <g id="SVGRepo_iconCarrier">
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M10.5014 1.15359C10.8116 0.975177 11.1935 0.97613 11.5029 1.15609C12.3449 1.64601 13.1238 2.05985 13.8587 2.4503L13.8587 2.45031C14.036 2.54449 14.2107 2.63732 14.3831 2.72953C15.2573 3.19699 16.0823 3.65354 16.811 4.16777C18.3248 5.23608 19.4192 6.5535 19.9701 8.7574C20.5121 10.9255 20.2212 12.8599 19.8424 14.661C19.7713 14.999 19.6979 15.33 19.6254 15.6567L19.6254 15.657L19.6253 15.6572C19.3752 16.7852 19.1364 17.8621 19.0422 19L19.4114 19L19.8418 19L19.9591 19H19.9896H19.9974H19.9994H19.9998H20H20C20.4304 19 20.8126 19.2754 20.9487 19.6838L21.7207 22H22C22.5523 22 23 22.4477 23 23C23 23.5523 22.5523 24 22 24H21H4.99999H3.99999C3.4477 24 2.99999 23.5523 2.99999 23C2.99999 22.4477 3.4477 22 3.99999 22H4.27923L5.0513 19.6838C5.18742 19.2754 5.56956 19 5.99999 19H7.32295L8.76926 15.3842L3.5401 16.7603C2.62461 17.0013 1.66561 16.5673 1.24226 15.7206L0.445745 14.1276C0.0446075 13.3253 0.224632 12.3499 0.899071 11.7473C1.70728 11.0252 3.23043 9.67416 4.3593 8.73219C4.843 8.32858 5.20051 7.8615 5.53425 7.34475C5.66811 7.13749 5.79158 6.93296 5.92146 6.71778C5.95694 6.65901 5.9929 6.59944 6.02967 6.53881C6.19574 6.26503 6.37548 5.97487 6.57499 5.69604C6.97917 5.13114 7.49272 4.57147 8.24793 4.18005C8.75596 3.91675 9.33341 3.75004 9.99999 3.68226V2.02045C9.99999 1.66259 10.1912 1.33201 10.5014 1.15359ZM10.9804 14.8024C11.0177 14.9867 11.0035 15.1837 10.9285 15.3714L9.47702 19L11.6541 19L17.0372 19C17.1375 17.6202 17.424 16.3351 17.6873 15.1537C17.7561 14.8451 17.8233 14.5436 17.8852 14.2493C18.2489 12.5205 18.458 10.955 18.0298 9.24247C17.6107 7.56581 16.836 6.63326 15.6578 5.80185C15.0405 5.36622 14.3138 4.96048 13.44 4.49317C13.2759 4.40542 13.1069 4.31563 12.9332 4.2234L12.9332 4.22336L12.933 4.22327L12.9325 4.22299C12.6347 4.06478 12.3233 3.89937 12 3.72468V4.6531C12 4.92495 11.8893 5.18509 11.6934 5.3736C11.4976 5.56212 11.2334 5.66277 10.9617 5.65237C10.0884 5.61894 9.54299 5.7615 9.16824 5.95573C8.79357 6.14991 8.50124 6.44093 8.20152 6.85983C8.04907 7.07288 7.90234 7.3079 7.73968 7.57607L7.64174 7.73808L7.64172 7.73812C7.50998 7.95641 7.36635 8.19443 7.21432 8.42982C6.82599 9.03109 6.34133 9.68314 5.64067 10.2678C4.54252 11.1841 3.04532 12.5118 2.23561 13.2352L3.03111 14.8262L11.7455 12.5329C12.2796 12.3924 12.8265 12.7114 12.9671 13.2455C13.1076 13.7796 12.7886 14.3265 12.2545 14.4671L10.9804 14.8024ZM7 21H9L9.05777 21L11.6541 21L18 21L19.2792 21L19.6126 22H6.38741L6.72075 21L7 21ZM9.5 11C10.3284 11 11 10.3284 11 9.5C11 8.67157 10.3284 8 9.5 8C8.67157 8 8 8.67157 8 9.5C8 10.3284 8.67157 11 9.5 11Z"
+                          fill="#000000"
+                        ></path>
+                      </g>
+                    </svg>
+                    <h2 class="mt-4 text-xl font-medium sm:text-2xl">보드게임의 의미는?</h2>
+                  </div>
+
+                  <div class="absolute p-4 opacity-0 transition-opacity group-hover:relative group-hover:opacity-100 sm:p-6 lg:p-8">
+                    <h3 class="mt-4 text-xl font-medium sm:text-2xl">보드게임의 의미는?</h3>
+
+                    <p class="mt-4 text-sm sm:text-base">
+                      엄밀한 의미에서는 Board Game 또는 Brett Spiel은 Card Game, 독어로는 Karten Spiel과 명백하게 구분되나 국내에서는 카드, 타일, 보드게임 등을 통칭하는 용어로 사용되고 있습니다.
+                    </p>
+                    <p class="mt-8 font-bold">Read more</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="w-full md:w-1/3 xl:w-1/3 p-6 flex flex-col">
+              <a href="https://www.boardgame.or.kr/association/boardgame" target="_blank" class="group relative block h-64 sm:h-80 lg:h-96">
+                <span class="absolute inset-0 border-2 border-dashed border-black"></span>
+                <div class="relative flex h-full transform items-end border-2 border-black bg-white transition-transform group-hover:-translate-x-2 group-hover:-translate-y-2">
+                  <div class="p-4 !pt-0 transition-opacity group-hover:absolute group-hover:opacity-0 sm:p-6 lg:p-8">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 sm:h-12 sm:w-12">
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                      <g id="SVGRepo_iconCarrier">
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M5 3C5 2.44772 5.44772 2 6 2H18C18.5523 2 19 2.44772 19 3V21C19 21.5523 18.5523 22 18 22H6C5.44771 22 5 21.5523 5 21V3ZM6 0C4.34315 0 3 1.34315 3 3V21C3 22.6569 4.34315 24 6 24H18C19.6569 24 21 22.6569 21 21V3C21 1.34314 19.6569 0 18 0H6ZM10.2975 14.0556C10.7393 14.0556 11.1602 13.9302 11.5128 13.7109V15.0278H11.0267C10.7582 15.0278 10.5405 15.2455 10.5405 15.514C10.5405 15.7824 10.7582 16.0001 11.0267 16.0001H12.9711C13.2396 16.0001 13.4572 15.7824 13.4572 15.514C13.4572 15.2455 13.2396 15.0278 12.9711 15.0278H12.485V13.7109C12.8376 13.9302 13.2585 14.0556 13.7003 14.0556C14.8665 14.0556 15.8878 13.1816 15.8878 12.0139C15.8878 11.3139 15.4569 10.827 15.0429 10.4629C14.872 10.3127 14.6818 10.1649 14.5012 10.0246L14.5012 10.0246L14.5011 10.0246L14.5011 10.0245L14.5011 10.0245L14.501 10.0244L14.5005 10.0241L14.4993 10.0232C14.4594 9.99211 14.4199 9.96144 14.3812 9.9312C14.1598 9.75805 13.9528 9.59026 13.7693 9.40926C13.1961 8.84383 12.6668 7.94843 12.4263 7.50459C12.3414 7.34772 12.1773 7.25 11.9989 7.25C11.8205 7.25 11.6564 7.34772 11.5715 7.50459C11.3311 7.94843 10.8017 8.84383 10.2285 9.40926C10.045 9.59026 9.83801 9.75805 9.61658 9.9312C9.57733 9.96189 9.53725 9.99303 9.4967 10.0245L9.49669 10.0245C9.31611 10.1648 9.12586 10.3126 8.95494 10.4629C8.54094 10.827 8.10999 11.3139 8.10999 12.0139C8.10999 13.1816 9.13129 14.0556 10.2975 14.0556ZM8 3.5C8.18939 3.5 8.36252 3.607 8.44721 3.77639L9.44721 5.77639L9.94721 6.77639C10.0707 7.02338 9.9706 7.32372 9.72361 7.44721C9.47662 7.57071 9.17628 7.4706 9.05279 7.22361L8.69098 6.5H7.30902L6.94721 7.22361C6.82372 7.4706 6.52338 7.57071 6.27639 7.44721C6.0294 7.32372 5.92929 7.02338 6.05279 6.77639L6.55279 5.77639L7.55279 3.77639C7.63748 3.607 7.81061 3.5 8 3.5ZM8.19098 5.5L8 5.11803L7.80902 5.5H8.19098ZM16.4472 16.7764C16.3625 16.607 16.1894 16.5 16 16.5C15.8106 16.5 15.6375 16.607 15.5528 16.7764L14.5528 18.7764L14.0528 19.7764C13.9293 20.0234 14.0294 20.3237 14.2764 20.4472C14.5234 20.5707 14.8237 20.4706 14.9472 20.2236L15.309 19.5H16.691L17.0528 20.2236C17.1763 20.4706 17.4766 20.5707 17.7236 20.4472C17.9706 20.3237 18.0707 20.0234 17.9472 19.7764L17.4472 18.7764L16.4472 16.7764ZM16 18.118L16.191 18.5H15.809L16 18.118Z"
+                          fill="#000000"
+                        ></path>
+                      </g>
+                    </svg>
+
+                    <h2 class="mt-4 text-xl font-medium sm:text-2xl">보드게임의 소재는?</h2>
+                  </div>
+
+                  <div class="absolute p-4 opacity-0 transition-opacity group-hover:relative group-hover:opacity-100 sm:p-6 lg:p-8">
+                    <h3 class="mt-4 text-xl font-medium sm:text-2xl">보드게임의 소재는?</h3>
+
+                    <p class="mt-4 text-sm sm:text-base">보드게임의 소재로 역사, 전쟁, 경제, 언어, 음악, 미술, 스포츠, 영화 등 인류의 모든 지식과 문화가 활용되고 있습니다.</p>
+                    <p class="mt-8 font-bold">Read more</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="w-full md:w-1/3 xl:w-1/3 p-6 flex flex-col">
+              <a href="https://www.boardgame.or.kr/association/boardgame" target="_blank" class="group relative block h-64 sm:h-80 lg:h-96">
+                <span class="absolute inset-0 border-2 border-dashed border-black"></span>
+                <div class="relative flex h-full transform items-end border-2 border-black bg-white transition-transform group-hover:-translate-x-2 group-hover:-translate-y-2">
+                  <div class="p-4 !pt-0 transition-opacity group-hover:absolute group-hover:opacity-0 sm:p-6 lg:p-8">
+                    <svg fill="#000000" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 sm:h-12 sm:w-12">
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                      <g id="SVGRepo_iconCarrier">
+                        <path
+                          d="M 8 4 L 8 6 L 4.8007812 6 L 6.0742188 12 L 6 12 C 5.4 12 5 12.4 5 13 C 5 13.6 5.4 14 6 14 L 6.109375 14 L 5.0917969 21 L 5 21 C 4.4 21 4 21.4 4 22 C 4 22.31975 4.119476 22.576073 4.3164062 22.751953 L 3 24.699219 L 3 27 L 15 27 L 15.099609 27 L 15.099609 24.699219 L 13.744141 22.693359 C 13.903452 22.520011 14 22.285236 14 22 C 14 21.4 13.6 21 13 21 L 12.890625 21 L 11.808594 14 L 12 14 C 12.6 14 13 13.6 13 13 C 13 12.4 12.6 12 12 12 L 11.949219 12 L 13.300781 6 L 10 6 L 10 4 L 8 4 z M 7.1992188 8 L 10.800781 8 L 9.9003906 12 L 8.0996094 12 L 7.1992188 8 z M 19 9 L 19 11 L 19 12 L 19 15.400391 L 19.900391 16.300781 L 19.128906 21 L 19 21 C 18.4 21 18 21.4 18 22 C 18 22.31975 18.119476 22.576073 18.316406 22.751953 L 17 24.699219 L 17 27 L 29 27 L 29.099609 27 L 29.099609 24.699219 L 27.744141 22.693359 C 27.903452 22.520011 28 22.285236 28 22 C 28 21.4 27.6 21 27 21 L 26.871094 21 L 26.099609 16.300781 L 27 15.400391 L 27 12 L 27 11 L 27 9 L 25 9 L 25 11 L 24 11 L 24 9 L 22 9 L 22 11 L 21 11 L 21 9 L 19 9 z M 21 13 L 25 13 L 25 14.599609 L 23.900391 15.699219 L 24.800781 21 L 21.199219 21 L 22.099609 15.699219 L 21 14.599609 L 21 13 z M 8.1992188 14 L 9.9003906 14 L 10.900391 21 L 7.1992188 21 L 8.1992188 14 z M 6.5 23 L 11.5 23 L 12.800781 25 L 5.1992188 25 L 6.5 23 z M 20.599609 23 L 25.5 23 L 26.800781 25 L 19.199219 25 L 20.599609 23 z"
+                        ></path>
+                      </g>
+                    </svg>
+
+                    <h2 class="mt-4 text-xl font-medium sm:text-2xl">보드게임의 현황은?</h2>
+                  </div>
+
+                  <div class="absolute p-4 opacity-0 transition-opacity group-hover:relative group-hover:opacity-100 sm:p-6 lg:p-8">
+                    <h3 class="mt-4 text-xl font-medium sm:text-2xl">보드게임의 현황은?</h3>
+
+                    <p class="mt-4 text-sm sm:text-base">현재 전세계 50,000여종의 보드게임이 존재하며, 매년 1,000여 종에 가까운 신작들이 전세계 보드게임 개발자들에 의해 출시되고 있습니다.</p>
+                    <p class="mt-8 font-bold">Read more</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- Best 8 section -->
     <section class="bg-white py-8">
       <div class="container mx-auto flex items-center flex-wrap pt-4 pb-12">
         <nav id="Best Items" class="w-full z-30 top-0 px-6 py-1">
           <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-2 py-3">
-            <a class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl" href="#"> Best 8 </a>
-
-            <!-- <div class="flex items-center" id="store-nav-content">
-              <a class="pl-3 inline-block no-underline hover:text-black" href="#">
-                <svg class="fill-current hover:text-black" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                  <path d="M7 11H17V13H7zM4 7H20V9H4zM10 15H14V17H10z" />
-                </svg>
-              </a>
-
-              <a class="pl-3 inline-block no-underline hover:text-black" href="#">
-                <svg class="fill-current hover:text-black" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                  <path
-                    d="M10,18c1.846,0,3.543-0.635,4.897-1.688l4.396,4.396l1.414-1.414l-4.396-4.396C17.365,13.543,18,11.846,18,10 c0-4.411-3.589-8-8-8s-8,3.589-8,8S5.589,18,10,18z M10,4c3.309,0,6,2.691,6,6s-2.691,6-6,6s-6-2.691-6-6S6.691,4,10,4z"
-                  />
-                </svg>
-              </a>
-            </div> -->
+            <h2 class="text-2xl font-bold md:text-3xl uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800">Best 8</h2>
           </div>
         </nav>
 
@@ -373,11 +436,9 @@
             <img class="hover:grow hover:shadow-lg" src="./public/images/best8.png" />
             <div class="pt-3 flex items-center justify-between">
               <p class="">카탄</p>
-
-              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-search-heart h-6 w-6 fill-current text-gray-500 hover:text-rose-800" viewBox="0 0 16 16">
-                <path d="M6.5 4.482c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.69 0-5.018Z" />
+              <svg class="h-6 w-6 fill-current text-gray-500 hover:text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path
-                  d="M13 6.5a6.471 6.471 0 0 1-1.258 3.844c.04.03.078.062.115.098l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1.007 1.007 0 0 1-.1-.115h.002A6.5 6.5 0 1 1 13 6.5ZM6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11Z"
+                  d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z"
                 />
               </svg>
             </div>
@@ -387,34 +448,13 @@
       </div>
     </section>
 
-    <section class="bg-white py-8">
-      <div class="container py-8 px-6 mx-auto">
-        <a class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl mb-8" href="#"> Board Game? </a>
-
-        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-        <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_fdiz42kg.json" background="transparent" speed="1" style="width: 300px; height: 300px" loop autoplay></lottie-player>
-
-        <p class="mt-8 mb-8">
-          최소 두 명 이상의 사람들이 직접 대면하여 보드(board), 카드(card), 타일(tile)등 유형의 물리적인 도구를 이용하여 정해진 규칙에 따라 승패를 가리는 모든 놀이를 통칭합니다.
-          <!-- This template is inspired by the stunning nordic minamalist design - in particular:
-          <br />
-          <a class="text-gray-800 underline hover:text-gray-900" href="http://savoy.nordicmade.com/" target="_blank">Savoy Theme</a> created by
-          <a class="text-gray-800 underline hover:text-gray-900" href="https://nordicmade.com/">https://nordicmade.com/</a> and
-          <a class="text-gray-800 underline hover:text-gray-900" href="https://www.metricdesign.no/" target="_blank">https://www.metricdesign.no/</a> -->
-        </p>
-
-        <p class="mb-8">엄밀한 의미에서는 Board Game 또는 Brett Spiel은 Card Game, 독어로는 Karten Spiel과 명백하게 구분되나 국내에서는 카드, 타일, 보드게임 등을 통칭하는 용어로 사용되고 있습니다.</p>
-        <p class="mb-8">보드게임의 소재로 역사, 전쟁, 경제, 언어, 음악, 미술, 스포츠, 영화 등 인류의 모든 지식과 문화가 활용되고 있습니다.</p>
-        <p class="mb-8">현재 전세계 50,000여종의 보드게임이 존재하며, 매년 1,000여 종에 가까운 신작들이 전세계 보드게임 개발자들에 의해 출시되고 있습니다.</p>
-      </div>
-    </section>
-
+    <!-- footer -->
     <footer class="container mx-auto bg-white py-8 border-t border-gray-400">
       <div class="container flex px-3 py-8">
         <div class="w-full mx-auto flex flex-wrap">
           <div class="flex w-full lg:w-1/2">
             <div class="px-3 md:px-0">
-              <h3 class="font-bold text-gray-900">&copy; Copyright</h3>
+              <h3 class="font-bold text-gray-900 hover:text-rose-600">&copy; Copyright</h3>
               <p class="py-4">2023 &middot; Joonbu Univ. &middot; Team GameMeeple</p>
             </div>
           </div>
