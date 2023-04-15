@@ -111,6 +111,156 @@
       </div>
     </nav>
 
+    <section class="bg-white py-8">
+      <div class="container mx-auto flex items-center flex-wrap pt-4 pb-12">
+        <nav id="Best Items" class="w-full z-30 top-0 px-6 py-1">
+          <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-2 py-3">
+            <h2 class="text-2xl font-bold md:text-3xl tracking-wide no-underline hover:no-underline font-bold text-gray-800">Games</h2>
+          </div>
+        </nav>
+
+        <div class="container my-5">
+          <div class="flex">
+            <form class = "ml-auto">
+              <div class="form-row">
+                <div class="form-group col-md-4">
+                  <select class="block w-full py-2 px-3 border border-gray-300 bg-white text-base focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent rounded-md" id="sortPrice">
+                    <option value="asc">낮은 가격 순</option>
+                    <option value="desc">높은 가격 순</option>
+                  </select>
+                </div>
+              </div>
+              <button type="submit" class="mt-2 ml-12 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                정렬하기
+              </button>
+            
+            </form>
+          </div>
+          <div id="productList" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+          </div>
+        </div>
+        
+
+        <script>
+          // Sample products data
+          const products = [
+            {
+              name: '에이언즈 엔드',
+              member: "1~4",
+              price: 95000,
+              imgSrc: './public/images/best1.png',
+              link: "https://www.divedice.com/shop/detail.php?pno=EBB884F6FC4D14827B8C55D8411D8213&rURL=https%3A%2F%2Fwww.divedice.com%2Fshop%2Fsearch_result.php%3Fsearch_str%3D%25EC%2597%2590%25EC%259D%25B4%25EC%2596%25B8%25EC%25A6%2588%2B%25EC%2597%2594%25EB%2593%259C%26x%3D0%26y%3D0&ctype=1&cno1="
+            },
+            {
+              name: '아발론 빅 박스',
+              member: "5~10",
+              price: 33000,
+              imgSrc: './public/images/best2.png',
+              link: "https://www.divedice.com/shop/detail.php?pno=D0BED3A3E689D20F4F3FD0B5EECD2D4B&rURL=https%3A%2F%2Fwww.divedice.com%2Fshop%2Fsearch_result.php%3Fsearch_str%3D%25EC%2595%2584%25EB%25B0%259C%25EB%25A1%25A0%26x%3D0%26y%3D0&ctype=1&cno1="
+            },
+            {
+              name: '안갯속의 카르카손',
+              member: "1~5",
+              price: 46000,
+              imgSrc: './public/images/best3.png',
+              link: "https://www.divedice.com/shop/detail.php?pno=1E2D681B253CB12C33F7B4823AF01D79&rURL=https%3A%2F%2Fwww.divedice.com%2Fshop%2Fsearch_result.php%3Fsearch_str%3D%25EC%2595%2588%25EA%25B0%25AF%25EC%2586%258D%26x%3D0%26y%3D0&ctype=1&cno1="
+            },
+            {
+              name: '아그리콜라 15주년 기념판',
+              member: "1~4",
+              price: 190000,
+              imgSrc: './public/images/best4.png',
+              link: "https://www.divedice.com/shop/detail.php?pno=F24589B329C48EAAD3EF1C9A9779F076&rURL=https%3A%2F%2Fwww.divedice.com%2Fshop%2Fsearch_result.php%3Fsearch_str%3D%25EC%2595%2584%25EA%25B7%25B8%25EB%25A6%25AC%26x%3D0%26y%3D0&ctype=1&cno1="
+            },
+            {
+              name: '서쪽 왕국의 성기사',
+              member: "1~4",
+              price: 71000,
+              imgSrc: './public/images/best5.png',
+              link: "https://www.divedice.com/shop/detail.php?pno=6F7790BB54A7C5D3DEA27385488A604A&rURL=https%3A%2F%2Fwww.divedice.com%2Fshop%2Fsearch_result.php%3Fsearch_str%3D%25EC%2584%259C%25EC%25AA%25BD%26x%3D0%26y%3D0&ctype=1&cno1="
+            },
+            {
+              name: '웨더 머신',
+              member: "1~4",
+              price: 289000,
+              imgSrc: './public/images/best6.png',
+              link: "https://www.divedice.com/shop/detail.php?pno=FC4501033DD658D8546AF02BE552BA71&rURL=https%3A%2F%2Fwww.divedice.com%2Fshop%2Fsearch_result.php%3Fsearch_str%3D%25EC%259B%25A8%25EB%258D%2594%26x%3D0%26y%3D0&ctype=1&cno1="
+            },
+            {
+              name: '루미큐브 클래식',
+              member: "2~4",
+              price: 44000,
+              imgSrc: './public/images/best7.png',
+              link: "https://www.divedice.com/shop/detail.php?pno=DC506560E1F9F5F4A27C6614123E2E50&rURL=https%3A%2F%2Fwww.divedice.com%2Fshop%2Fsearch_result.php%3Fsearch_str%3D%25EB%25A3%25A8%25EB%25AF%25B8%26x%3D0%26y%3D0&ctype=1&cno1="
+            },
+            {
+              name: '카탄',
+              member: "3~4",
+              price: 59000,
+              imgSrc: './public/images/best8.png',
+              link: "https://www.divedice.com/shop/detail.php?pno=C7E791B16611DECA87A347C22CE64E11&rURL=https%3A%2F%2Fwww.divedice.com%2Fshop%2Fsearch_result.php%3Fsearch_str%3D%25EC%25B9%25B4%25ED%2583%2584%26x%3D0%26y%3D0&ctype=1&cno1="
+            }
+          ];
+        
+          // Sorts products and updates the DOM
+          function sortProducts() {
+            const sortOption = document.getElementById('sortPrice').value;
+            let sortedProducts;
+        
+            switch (sortOption) {
+              case 'asc':
+                sortedProducts = products.sort((a, b) => a.price - b.price);
+                break;
+              case 'desc':
+                sortedProducts = products.sort((a, b) => b.price - a.price);
+                break;
+              default:
+                return;
+            }
+        
+            updateProductList(sortedProducts);
+          }
+        
+          function updateProductList(sortedProducts) {
+            const productList = document.getElementById('productList');
+            productList.innerHTML = '';
+        
+            sortedProducts.forEach(product => {
+              const productItem = `
+              <li class="p-6 flex flex-col">
+                <a href="${product.link}" class="cursor-pointer">
+                <img class="w-full h-auto hover:grow hover:shadow-lg" src="${product.imgSrc}" />
+                </a>
+                    <div class="pt-3 flex items-center justify-between">
+                      <p class="">${product.name}</p>
+                      <svg class="h-6 w-6 fill-current text-gray-500 hover:text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                          d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z"
+                        />
+                        </svg>
+                    </div>
+                    
+                    <p class="pt-1 text-gray-900">${product.price}&#8361; 적정인원 ${product.member}명</p>
+                  </a>
+                </li>
+              `;
+        
+              productList.innerHTML += productItem;
+            });
+          }
+        
+          // Initialize the product list
+          updateProductList(products);
+        
+          // Attach the sortProducts function to the form's submit event
+          document.querySelector('form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            sortProducts();
+          });
+        </script>
+        
+
+        </section>
     <!-- footer -->
     <footer class="container mx-auto bg-white py-8 border-t border-gray-400">
       <div class="container flex px-3 py-8">
@@ -134,5 +284,6 @@
         </div>
       </div>
     </footer>
+    <script src="sort.js"></script>
   </body>
 </html>
