@@ -62,6 +62,7 @@
       #carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
       #carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
         color: #000;
+        /*Set to match the Tailwind colour you want the active one to be */
       }
     </style>
   </head>
@@ -141,65 +142,116 @@
         
 
         <script>
+          // Sample products data
+
+
+          function formatPrice(price) {
+            return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+          }
           const products = [
             {
-              name: '에이언즈 엔드',
-              member: "1~4",
-              price: 95000,
-              imgSrc: './public/images/best1.png',
-              link: "https://www.divedice.com/shop/detail.php?pno=EBB884F6FC4D14827B8C55D8411D8213&rURL=https%3A%2F%2Fwww.divedice.com%2Fshop%2Fsearch_result.php%3Fsearch_str%3D%25EC%2597%2590%25EC%259D%25B4%25EC%2596%25B8%25EC%25A6%2588%2B%25EC%2597%2594%25EB%2593%259C%26x%3D0%26y%3D0&ctype=1&cno1="
+              name: '크레이지 타임',
+              member: "3~14",
+              price: 29000,
+              formattedPrice: formatPrice(29000),
+              imgSrc: './public/images/games5.png',
+              link: "https://www.divedice.com/shop/detail.php?pno=2DE71582A218719FE12EFCF81A4A3DDC&rURL=https%3A%2F%2Fwww.divedice.com%2Fshop%2Fbig_section.php%3Fpage%3D7%26cno1%3D2147%26sort%3D1&ctype=1&cno1=2147"
             },
             {
-              name: '아발론 빅 박스',
-              member: "5~10",
-              price: 33000,
-              imgSrc: './public/images/best2.png',
-              link: "https://www.divedice.com/shop/detail.php?pno=D0BED3A3E689D20F4F3FD0B5EECD2D4B&rURL=https%3A%2F%2Fwww.divedice.com%2Fshop%2Fsearch_result.php%3Fsearch_str%3D%25EC%2595%2584%25EB%25B0%259C%25EB%25A1%25A0%26x%3D0%26y%3D0&ctype=1&cno1="
+              name: '스트라이크',
+              member: "2~5",
+              price: 35000,
+              formattedPrice: formatPrice(35000),
+              imgSrc: './public/images/games6.png',
+              link: "https://www.divedice.com/shop/detail.php?pno=5D40C4D766944F12591F840C4D72D7AC&rURL=https%3A%2F%2Fwww.divedice.com%2Fshop%2Fbig_section.php%3Fpage%3D8%26cno1%3D2147%26sort%3D1&ctype=1&cno1=2147"
             },
             {
-              name: '안갯속의 카르카손',
-              member: "1~5",
-              price: 46000,
-              imgSrc: './public/images/best3.png',
-              link: "https://www.divedice.com/shop/detail.php?pno=1E2D681B253CB12C33F7B4823AF01D79&rURL=https%3A%2F%2Fwww.divedice.com%2Fshop%2Fsearch_result.php%3Fsearch_str%3D%25EC%2595%2588%25EA%25B0%25AF%25EC%2586%258D%26x%3D0%26y%3D0&ctype=1&cno1="
-            },
-            {
-              name: '아그리콜라 15주년 기념판',
-              member: "1~4",
-              price: 190000,
-              imgSrc: './public/images/best4.png',
-              link: "https://www.divedice.com/shop/detail.php?pno=F24589B329C48EAAD3EF1C9A9779F076&rURL=https%3A%2F%2Fwww.divedice.com%2Fshop%2Fsearch_result.php%3Fsearch_str%3D%25EC%2595%2584%25EA%25B7%25B8%25EB%25A6%25AC%26x%3D0%26y%3D0&ctype=1&cno1="
-            },
-            {
-              name: '서쪽 왕국의 성기사',
-              member: "1~4",
-              price: 71000,
-              imgSrc: './public/images/best5.png',
-              link: "https://www.divedice.com/shop/detail.php?pno=6F7790BB54A7C5D3DEA27385488A604A&rURL=https%3A%2F%2Fwww.divedice.com%2Fshop%2Fsearch_result.php%3Fsearch_str%3D%25EC%2584%259C%25EC%25AA%25BD%26x%3D0%26y%3D0&ctype=1&cno1="
-            },
-            {
-              name: '웨더 머신',
-              member: "1~4",
-              price: 289000,
-              imgSrc: './public/images/best6.png',
-              link: "https://www.divedice.com/shop/detail.php?pno=FC4501033DD658D8546AF02BE552BA71&rURL=https%3A%2F%2Fwww.divedice.com%2Fshop%2Fsearch_result.php%3Fsearch_str%3D%25EC%259B%25A8%25EB%258D%2594%26x%3D0%26y%3D0&ctype=1&cno1="
-            },
-            {
-              name: '루미큐브 클래식',
-              member: "2~4",
-              price: 44000,
-              imgSrc: './public/images/best7.png',
-              link: "https://www.divedice.com/shop/detail.php?pno=DC506560E1F9F5F4A27C6614123E2E50&rURL=https%3A%2F%2Fwww.divedice.com%2Fshop%2Fsearch_result.php%3Fsearch_str%3D%25EB%25A3%25A8%25EB%25AF%25B8%26x%3D0%26y%3D0&ctype=1&cno1="
-            },
-            {
-              name: '카탄',
-              member: "3~4",
+              name: '언락5',
+              member: "1~6",
               price: 59000,
-              imgSrc: './public/images/best8.png',
-              link: "https://www.divedice.com/shop/detail.php?pno=C7E791B16611DECA87A347C22CE64E11&rURL=https%3A%2F%2Fwww.divedice.com%2Fshop%2Fsearch_result.php%3Fsearch_str%3D%25EC%25B9%25B4%25ED%2583%2584%26x%3D0%26y%3D0&ctype=1&cno1="
-            }
+              formattedPrice: formatPrice(59000),
+              imgSrc: './public/images/games7.png',
+              link: "https://www.divedice.com/shop/detail.php?pno=FB9498C98B58294F190A52C37C2972D9&rURL=https%3A%2F%2Fwww.divedice.com%2Fshop%2Fbig_section.php%3Fcno1%3D2150&ctype=1&cno1=2150"
+            },
+            {
+              name: '우노',
+              member: "2~10",
+              price: 17000,
+              formattedPrice: formatPrice(17000),
+              imgSrc: './public/images/games8.png',
+              link: "https://www.divedice.com/shop/detail.php?pno=BB01F00DAAEAC676313D2031DFD1E419&rURL=https%3A%2F%2Fwww.divedice.com%2Fshop%2Fbig_section.php%3Fpage%3D3%26cno1%3D2163&ctype=1&cno1=2163"
+            },
+            {
+              name: '뱅',
+              member: "4~7",
+              price: 28000,
+              formattedPrice: formatPrice(28000),
+              imgSrc: './public/images/games9.png',
+              link: "https://www.divedice.com/shop/detail.php?pno=6BBD80B04535D39BE5E02DBFD8730469&rURL=https%3A%2F%2Fwww.divedice.com%2Fshop%2Fbig_section.php%3Fcno1%3D2164&ctype=1&cno1=2164"
+            },
+            {
+              name: '오징어게임',
+              member: "3~6",
+              price: 55000,
+              formattedPrice: formatPrice(55000),
+              imgSrc: './public/images/games10.png',
+              link: "https://www.divedice.com/shop/detail.php?pno=702155B162D67F1D32C68E3054B82A57&rURL=https%3A%2F%2Fwww.divedice.com%2Fshop%2Fbig_section.php%3Fcno1%3D2162&ctype=1&cno1=2162"
+            },
+            {
+              name: '아줄: 마스터 쇼콜라티에',
+              member: "2~4",
+              price: 75000,
+              formattedPrice: formatPrice(75000),
+              imgSrc: './public/images/games11.png',
+              link: "https://www.divedice.com/shop/detail.php?pno=7C25BA533B6481D01E95BA7AB65194FA&rURL=https%3A%2F%2Fwww.divedice.com%2Fshop%2Fbig_section.php%3Fpage%3D4%26cno1%3D2147&ctype=1&cno1=2147"
+            },  
+            {
+              name: '아멜리아의 비밀',
+              member: "1~4",
+              price: 33000,
+              formattedPrice: formatPrice(33000),
+              imgSrc: './public/images/games12.png',
+              link: "https://www.divedice.com/shop/detail.php?pno=D2EE7C802D33276B97B3298931E82303&rURL=https%3A%2F%2Fwww.divedice.com%2Fshop%2Fbig_section.php%3Fcno1%3D2172&ctype=1&cno1=2172"
+            },
+            {
+              name: '이베리아',
+              member: "66000",
+              price: 49000,
+              formattedPrice: formatPrice(66000),
+              imgSrc: './public/images/games13.png',
+              link: "https://www.divedice.com/shop/detail.php?pno=7D65939039592CCA91C51EF731F768E4&rURL=https%3A%2F%2Fwww.divedice.com%2Fshop%2Fbig_section.php%3Fpage%3D3%26cno1%3D2147&ctype=1&cno1=2147"
+            },
+            {
+              name: '슈뢰딩거의 고양이',
+              member: "2~5",
+              price: 30000,
+              formattedPrice: formatPrice(30000),
+              imgSrc: './public/images/games14.png',
+              link: "https://www.divedice.com/shop/detail.php?pno=D5CC7743B1AF1094B27AFD0CCCD8FAEE&rURL=https%3A%2F%2Fwww.divedice.com%2Fshop%2Fbig_section.php%3Fcno1%3D2163&ctype=1&cno1=2163"
+            },
+            {
+              name: '리버탈리아',
+              member: "1~6",
+              price: 79000,
+              formattedPrice: formatPrice(79000),
+              imgSrc: './public/images/games15.png',
+              link: "https://www.divedice.com/shop/detail.php?pno=BA0D287EFE0F3236FB8E30CF8C42DF98&rURL=https%3A%2F%2Fwww.divedice.com%2Fshop%2Fbig_section.php%3Fpage%3D5%26cno1%3D2147&ctype=1&cno1=2147"
+            },
+            {
+              name: '광기의 저택',
+              member: "1~5",
+              price: 120000,
+              formattedPrice: formatPrice(120000),
+              imgSrc: './public/images/games16.png',
+              link: "https://www.divedice.com/shop/detail.php?pno=9DD28AFC29684433C16B3855AE3CB9B6&rURL=https%3A%2F%2Fwww.divedice.com%2Fshop%2Fsearch_result.php%3Fsearch_str%3D%25EA%25B4%2591%25EA%25B8%25B0%25EC%259D%2598%2B%25EC%25A0%2580%25ED%2583%259D%26x%3D0%26y%3D0&ctype=1&cno1="
+            },
+
           ];
+
+
+          
         
+          // Sorts products and updates the DOM
           function sortProducts() {
             const sortOption = document.getElementById('sortPrice').value;
             let sortedProducts;
@@ -225,20 +277,44 @@
             sortedProducts.forEach(product => {
               const productItem = `
               <li class="p-6 flex flex-col">
-                <a href="${product.link}" class="cursor-pointer">
-                <img class="w-full h-auto hover:grow hover:shadow-lg" src="${product.imgSrc}" />
+                <a href="${product.link}" target="_blank" class="cursor-pointer">
+                  <img class="w-full h-auto hover:grow hover:shadow-lg" src="${product.imgSrc}" />
                 </a>
-                    <div class="pt-3 flex items-center justify-between">
-                      <p class="">${product.name}</p>
-                      <svg class="h-6 w-6 fill-current text-gray-500 hover:text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path
-                          d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z"
-                        />
-                        </svg>
-                    </div>
-                    
-                    <p class="pt-1 text-gray-900">${product.price}&#8361; 적정인원 ${product.member}명</p>
-                  </a>
+                  <div class="pt-3 flex items-center justify-between">
+                    <p>${product.name}</p>
+                    <div class="flex items-center">
+                <svg
+                  viewBox="0 0 20 20"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  fill="#808080"
+                  class="h-5 w-5 fill-current text-gray-500 hover:text-black"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <title>profile_round [#1342]</title>
+                    <desc>Created with Sketch.</desc>
+                    <defs></defs>
+                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <g id="Dribbble-Light-Preview" transform="translate(-140.000000, -2159.000000)" fill="#808080">
+                        <g id="icons" transform="translate(56.000000, 160.000000)">
+                          <path
+                            d="M100.562548,2016.99998 L87.4381713,2016.99998 C86.7317804,2016.99998 86.2101535,2016.30298 86.4765813,2015.66198 C87.7127655,2012.69798 90.6169306,2010.99998 93.9998492,2010.99998 C97.3837885,2010.99998 100.287954,2012.69798 101.524138,2015.66198 C101.790566,2016.30298 101.268939,2016.99998 100.562548,2016.99998 M89.9166645,2004.99998 C89.9166645,2002.79398 91.7489936,2000.99998 93.9998492,2000.99998 C96.2517256,2000.99998 98.0830339,2002.79398 98.0830339,2004.99998 C98.0830339,2007.20598 96.2517256,2008.99998 93.9998492,2008.99998 C91.7489936,2008.99998 89.9166645,2007.20598 89.9166645,2004.99998 M103.955674,2016.63598 C103.213556,2013.27698 100.892265,2010.79798 97.837022,2009.67298 C99.4560048,2008.39598 100.400241,2006.33098 100.053171,2004.06998 C99.6509769,2001.44698 97.4235996,1999.34798 94.7348224,1999.04198 C91.0232075,1998.61898 87.8750721,2001.44898 87.8750721,2004.99998 C87.8750721,2006.88998 88.7692896,2008.57398 90.1636971,2009.67298 C87.1074334,2010.79798 84.7871636,2013.27698 84.044024,2016.63598 C83.7745338,2017.85698 84.7789973,2018.99998 86.0539717,2018.99998 L101.945727,2018.99998 C103.221722,2018.99998 104.226185,2017.85698 103.955674,2016.63598"
+                            id="profile_round-[#1342]"
+                          ></path>
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+                <p class="text-gray-900">&nbsp${product.member}</p>
+              </div>
+                  
+                  </div>
+                  <p class="pt-1 text-gray-900">&#8361;${product.formattedPrice}</p>
+                </a>
                 </li>
               `;
         
@@ -246,16 +322,33 @@
             });
           }
         
+          // Initialize the product list
           updateProductList(products);
         
+          // Attach the sortProducts function to the form's submit event
           document.querySelector('form').addEventListener('submit', (e) => {
             e.preventDefault();
             sortProducts();
           });
         </script>
-        
 
         </section>
+
+        <section class="bg-white py-8">
+          <div class="container py-8 px-6 mx-auto flex items-center justify-center">
+            <a href="games.html" class="inline-flex items-center px-4 py-2 mr-3 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+              <svg aria-hidden="true" class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z" clip-rule="evenodd"></path></svg>
+              Previous
+            </a>
+            <a href="games3.html" class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+              Next
+              <svg aria-hidden="true" class="w-5 h-5 ml-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+            </a>
+          </div>
+        </section>
+
+
+    <!-- footer -->
     <footer class="container mx-auto bg-white py-8 border-t border-gray-400">
       <div class="container flex px-3 py-8">
         <div class="w-full mx-auto flex flex-wrap">
@@ -278,5 +371,6 @@
         </div>
       </div>
     </footer>
+    <script src="sort.js"></script>
   </body>
 </html>

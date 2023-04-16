@@ -143,92 +143,113 @@
 
         <script>
           // Sample products data
+
+
+          function formatPrice(price) {
+            return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+          }
           const products = [
             {
-              name: '에이언즈 엔드',
+              name: '할리갈리',
+              member: "2~6",
+              price: 19000,
+              formattedPrice: formatPrice(19000),
+              imgSrc: './public/images/game3-1.jpg',
+              link: "https://www.divedice.com/shop/detail.php?pno=B09007D46D54F6BB4166F7D582A3F5D9&rURL=https%3A%2F%2Fwww.divedice.com%2Fshop%2Fsearch_result.php%3Fsearch_str%3D%25ED%2595%25A0%25EB%25A6%25AC%25EA%25B0%2588%25EB%25A6%25AC%26x%3D0%26y%3D0&ctype=1&cno1="
+            },
+            {
+              name: '슬레이 더 스파이어',
               member: "1~4",
-              price: 95000,
-              imgSrc: './public/images/best1.png',
-              link: "https://www.divedice.com/shop/detail.php?pno=EBB884F6FC4D14827B8C55D8411D8213&rURL=https%3A%2F%2Fwww.divedice.com%2Fshop%2Fsearch_result.php%3Fsearch_str%3D%25EC%2597%2590%25EC%259D%25B4%25EC%2596%25B8%25EC%25A6%2588%2B%25EC%2597%2594%25EB%2593%259C%26x%3D0%26y%3D0&ctype=1&cno1="
+              price: 280000,
+              formattedPrice: formatPrice(280000),
+              imgSrc: './public/images/game3-2.png',
+              link: "https://www.divedice.com/shop/detail.php?pno=A5AD96AAA66880F3FAE475FA926781D2&rURL=https%3A%2F%2Fwww.divedice.com%2Fshop%2Fsearch_result.php%3Fsearch_str%3D%25EC%258A%25AC%25EB%25A0%2588%25EC%259D%25B4%26x%3D0%26y%3D0&ctype=1&cno1="
             },
             {
-              name: '아발론 빅 박스',
-              member: "5~10",
-              price: 33000,
-              imgSrc: './public/images/best2.png',
-              link: "https://www.divedice.com/shop/detail.php?pno=D0BED3A3E689D20F4F3FD0B5EECD2D4B&rURL=https%3A%2F%2Fwww.divedice.com%2Fshop%2Fsearch_result.php%3Fsearch_str%3D%25EC%2595%2584%25EB%25B0%259C%25EB%25A1%25A0%26x%3D0%26y%3D0&ctype=1&cno1="
-            },
-            {
-              name: '안갯속의 카르카손',
-              member: "1~5",
-              price: 46000,
-              imgSrc: './public/images/best3.png',
-              link: "https://www.divedice.com/shop/detail.php?pno=1E2D681B253CB12C33F7B4823AF01D79&rURL=https%3A%2F%2Fwww.divedice.com%2Fshop%2Fsearch_result.php%3Fsearch_str%3D%25EC%2595%2588%25EA%25B0%25AF%25EC%2586%258D%26x%3D0%26y%3D0&ctype=1&cno1="
-            },
-            {
-              name: '아그리콜라 15주년 기념판',
-              member: "1~4",
-              price: 190000,
-              imgSrc: './public/images/best4.png',
-              link: "https://www.divedice.com/shop/detail.php?pno=F24589B329C48EAAD3EF1C9A9779F076&rURL=https%3A%2F%2Fwww.divedice.com%2Fshop%2Fsearch_result.php%3Fsearch_str%3D%25EC%2595%2584%25EA%25B7%25B8%25EB%25A6%25AC%26x%3D0%26y%3D0&ctype=1&cno1="
-            },
-            {
-              name: '서쪽 왕국의 성기사',
-              member: "1~4",
-              price: 71000,
-              imgSrc: './public/images/best5.png',
-              link: "https://www.divedice.com/shop/detail.php?pno=6F7790BB54A7C5D3DEA27385488A604A&rURL=https%3A%2F%2Fwww.divedice.com%2Fshop%2Fsearch_result.php%3Fsearch_str%3D%25EC%2584%259C%25EC%25AA%25BD%26x%3D0%26y%3D0&ctype=1&cno1="
-            },
-            {
-              name: '웨더 머신',
-              member: "1~4",
-              price: 289000,
-              imgSrc: './public/images/best6.png',
-              link: "https://www.divedice.com/shop/detail.php?pno=FC4501033DD658D8546AF02BE552BA71&rURL=https%3A%2F%2Fwww.divedice.com%2Fshop%2Fsearch_result.php%3Fsearch_str%3D%25EC%259B%25A8%25EB%258D%2594%26x%3D0%26y%3D0&ctype=1&cno1="
-            },
-            {
-              name: '루미큐브 클래식',
+              name: '도미니언',
               member: "2~4",
-              price: 44000,
-              imgSrc: './public/images/best7.png',
-              link: "https://www.divedice.com/shop/detail.php?pno=DC506560E1F9F5F4A27C6614123E2E50&rURL=https%3A%2F%2Fwww.divedice.com%2Fshop%2Fsearch_result.php%3Fsearch_str%3D%25EB%25A3%25A8%25EB%25AF%25B8%26x%3D0%26y%3D0&ctype=1&cno1="
-            },
-            {
-              name: '카탄',
-              member: "3~4",
               price: 59000,
-              imgSrc: './public/images/best8.png',
-              link: "https://www.divedice.com/shop/detail.php?pno=C7E791B16611DECA87A347C22CE64E11&rURL=https%3A%2F%2Fwww.divedice.com%2Fshop%2Fsearch_result.php%3Fsearch_str%3D%25EC%25B9%25B4%25ED%2583%2584%26x%3D0%26y%3D0&ctype=1&cno1="
+              formattedPrice: formatPrice(59000),
+              imgSrc: './public/images/game3-3.jpg',
+              link: "https://www.divedice.com/shop/detail.php?pno=FC32F8C132C0FB39C91D4F3DAD7085A4&rURL=https%3A%2F%2Fwww.divedice.com%2Fshop%2Fsearch_result.php%3Fsearch_str%3D%25EB%258F%2584%25EB%25AF%25B8%25EB%258B%2588%25EC%2596%25B8%26x%3D0%26y%3D0&ctype=1&cno1="
             },
             {
-              name: '윙스팬',
+              name: '레즈 아르카나',
+              member: "2~4",
+              price: 52000,
+              formattedPrice: formatPrice(52000),
+              imgSrc: './public/images/game3-4.png',
+              link: "https://www.divedice.com/shop/detail.php?pno=7E286DB248221621ADC954F00E6A0255&rURL=https%3A%2F%2Fwww.divedice.com%2Fshop%2Fbig_section.php%3Fpage%3D2%26cno1%3D2147&ctype=1&cno1=2147"
+            },
+            {
+              name: '레이크홀트',
+              member: "1~4",
+              price: 69000,
+              formattedPrice: formatPrice(69000),
+              imgSrc: './public/images/game3-5.png',
+              link: "https://www.divedice.com/shop/detail.php?pno=D3B724E14DFE42F0A53C86DC5AAFD20F&rURL=https%3A%2F%2Fwww.divedice.com%2Fshop%2Fbig_section.php%3Fpage%3D11%26cno1%3D2147&ctype=1&cno1=2147"
+            },
+            {
+              name: '캔버스',
               member: "1~5",
-              price: 57900,
-              imgSrc: './public/images/games1.jpg',
-              link: "https://www.divedice.com/shop/detail.php?pno=C4CAEED371D0E0DC4A6EA62B9E297914&rURL=https%3A%2F%2Fwww.divedice.com%2Fshop%2Fbig_section.php%3Fcno1%3D2024&ctype=1&cno1=2024"
+              price: 59000,
+              formattedPrice: formatPrice(59000),
+              imgSrc: './public/images/game3-6.png',
+              link: "https://www.divedice.com/shop/detail.php?pno=02E2259AF55FB6A382CA7AA9F13319B3&rURL=https%3A%2F%2Fwww.divedice.com%2Fshop%2Fbig_section.php%3Fpage%3D16%26cno1%3D2147&ctype=1&cno1=2147"
             },
             {
-              name: '7원더스 2판',
-              member: "3~7",
-              price: 75000,
-              imgSrc: './public/images/games2.png',
-              link: "https://www.divedice.com/shop/detail.php?pno=EE77E8FB3CBE33BA56700DE13AE53F36&rURL=https%3A%2F%2Fwww.divedice.com%2Fshop%2Fbig_section.php%3Fcno1%3D2024&ctype=1&cno1=2024"
+              name: '광기의 산맥',
+              member: "3~5",
+              price: 55000,
+              formattedPrice: formatPrice(55000),
+              imgSrc: './public/images/game3-7.png',
+              link: "https://www.divedice.com/shop/detail.php?pno=2D9A3E519C394E52E45C7DAB97557CCC&rURL=https%3A%2F%2Fwww.divedice.com%2Fshop%2Fbig_section.php%3Fpage%3D21%26cno1%3D2147&ctype=1&cno1=2147"
             },
             {
-              name: '스페이스 크루',
-              member: "2~5",
-              price: 20000,
-              imgSrc: './public/images/games3.jpg',
-              link: "https://www.divedice.com/shop/detail.php?pno=9912AA9AF53C4553B443C5007AD11851&rURL=https%3A%2F%2Fwww.divedice.com%2Fshop%2Fbig_section.php%3Fcno1%3D2024&ctype=1&cno1=2024"
+              name: '워터게이트',
+              member: "2",
+              price: 43000,
+              formattedPrice: formatPrice(43000),
+              imgSrc: './public/images/game3-8.jpg',
+              link: "https://www.divedice.com/shop/detail.php?pno=C5F31ECF4111F3BBFA2B36F851379D6E&rURL=https%3A%2F%2Fwww.divedice.com%2Fshop%2Fbig_section.php%3Fpage%3D24%26cno1%3D2147&ctype=1&cno1=2147"
             },
             {
-              name: '안도르의 전설',
-              member: "1~5",
-              price: 66000,
-              imgSrc: './public/images/games4.jpg',
-              link: "https://www.divedice.com/shop/detail.php?pno=122A3DB2ED92DE4629B8D0887E498195&rURL=https%3A%2F%2Fwww.divedice.com%2Fshop%2Fbig_section.php%3Fcno1%3D2024&ctype=1&cno1=2024"
+              name: '드림 홈',
+              member: "2~4",
+              price: 49000,
+              formattedPrice: formatPrice(49000),
+              imgSrc: './public/images/game3-9.jpg',
+              link: "https://www.divedice.com/shop/detail.php?pno=B3E59BCEB1E975E5FC7F60BC079A65A0&rURL=https%3A%2F%2Fwww.divedice.com%2Fshop%2Fbig_section.php%3Fpage%3D32%26cno1%3D2147&ctype=1&cno1=2147"
             },
+            {
+              name: '스플렌더',
+              member: "2~4",
+              price: 49000,
+              formattedPrice: formatPrice(49000),
+              imgSrc: './public/images/game3-10.jpg',
+              link: "https://www.divedice.com/shop/detail.php?pno=586691F81045EBFE99049A8A8E43EA2E&rURL=https%3A%2F%2Fwww.divedice.com%2Fshop%2Fbig_section.php%3Fpage%3D34%26cno1%3D2147&ctype=1&cno1=2147"
+            },
+            {
+              name: '마법의 미로',
+              member: "2~4",
+              price: 55000,
+              formattedPrice: formatPrice(55000),
+              imgSrc: './public/images/game3-11.png',
+              link: "https://www.divedice.com/shop/detail.php?pno=AC411F98B72734D56053360159F88447&rURL=https%3A%2F%2Fwww.divedice.com%2Fshop%2Fbig_section.php%3Fpage%3D35%26cno1%3D2147&ctype=1&cno1=2147"
+            },
+            {
+              name: '다빈치코드',
+              member: "2~4",
+              price: 26000,
+              formattedPrice: formatPrice(26000),
+              imgSrc: './public/images/game3-12.png',
+              link: "https://www.divedice.com/shop/detail.php?pno=1E2327ACCF8E3B40AC236B51C966F94A&rURL=https%3A%2F%2Fwww.divedice.com%2Fshop%2Fbig_section.php%3Fpage%3D36%26cno1%3D2147&ctype=1&cno1=2147"
+            },
+
           ];
+
+
+          
         
           // Sorts products and updates the DOM
           function sortProducts() {
@@ -292,7 +313,7 @@
               </div>
                   
                   </div>
-                  <p class="pt-1 text-gray-900">&#8361;${product.price}</p>
+                  <p class="pt-1 text-gray-900">&#8361;${product.formattedPrice}</p>
                 </a>
                 </li>
               `;
@@ -315,12 +336,11 @@
 
         <section class="bg-white py-8">
           <div class="container py-8 px-6 mx-auto flex items-center justify-center">
-            <!-- Previous Button -->
-            <a href="#" class="inline-flex items-center px-4 py-2 mr-3 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+            <a href="games2.html" class="inline-flex items-center px-4 py-2 mr-3 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
               <svg aria-hidden="true" class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z" clip-rule="evenodd"></path></svg>
               Previous
             </a>
-            <a href="games2.html" class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+            <a href="#" class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
               Next
               <svg aria-hidden="true" class="w-5 h-5 ml-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
             </a>
